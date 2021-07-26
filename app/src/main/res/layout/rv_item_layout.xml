@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_movie_poster"
+        android:layout_width="120dp"
+        android:layout_height="185dp"
+        android:src="@drawable/photo"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="none"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="Бегущий по лезвию 2049"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_movie_poster"
+        app:layout_constraintTop_toTopOf="@+id/iv_movie_poster" />
+
+    <TextView
+        android:id="@+id/tv_movie_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:text="Отставной детектив Рик Декард вновь восстановлен в полиции Лос-Анджелеса"
+        android:textColor="#8A000000"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_release_date"
+        app:layout_constraintEnd_toEndOf="@+id/tv_movie_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_movie_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
+
+    <TextView
+        android:id="@+id/tv_movie_release_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="64dp"
+        android:text="1 января 2017"
+        android:textColor="#8A000000"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_calendar"
+        app:layout_constraintEnd_toStartOf="@+id/ib_movie_favourite"
+        app:layout_constraintStart_toEndOf="@+id/iv_calendar"
+        app:layout_constraintTop_toTopOf="@+id/iv_calendar" />
+
+    <ToggleButton
+        android:id="@+id/ib_movie_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/favourite_btn_background"
+        android:textOn=""
+        android:textOff=""
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_movie_release_date"
+        app:layout_constraintEnd_toEndOf="@+id/tv_movie_description"
+        app:layout_constraintTop_toTopOf="@+id/tv_movie_release_date" />
+
+    <ImageView
+        android:id="@+id/iv_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/calendar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_movie_poster"
+        app:layout_constraintStart_toStartOf="@+id/tv_movie_description" />
+</android.support.constraint.ConstraintLayout>
